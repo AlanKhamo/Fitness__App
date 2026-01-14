@@ -1,0 +1,24 @@
+nav {
+    background-color: #161515;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: left;
+}
+
+nav li {
+    list-style: none;
+    float: left;
+    padding-left: 8px;
+    padding-top: 17px;
+    padding-right: 10px;
+}
+li a {
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    line-height: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}

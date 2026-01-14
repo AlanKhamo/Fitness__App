@@ -1,0 +1,160 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr; /* Adjust row sizing */
+  padding: 10px;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(65, 43, 12);
+  grid-row: 1 / -1; /* Span all rows */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.left-container {
+  background-color: #eee;
+  grid-row: 1 / -1; /* Span all rows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.right-container,
+.right-container-2 {
+  grid-row: 2 / 3; /* Adjust row placement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.right-container-2 {
+  flex-direction: column; /* Stack elements vertically */
+  padding: 10px; /* Adjust padding */
+}
+
+.filter {
+  filter: grayscale(100%) blur(5px);
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #0072c6;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: #0072c6;
+}
+
+.button:active {
+  background-color: #0072c6;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.gradient-background {
+  background-image: linear-gradient(to bottom, #0a0a0a, #6475d3, #8f8d8d);
+  /* padding: 20px; */
+  height: 100%;
+  grid-row: 2 / 3; /* Adjust row placement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.gradient-background2 {
+  background-image: linear-gradient(to bottom, #0a0a0a, #6475d3, #8f8d8d);
+  /* padding: 20px; */
+  height: 100%;
+  grid-row: 2 / 3; /* Adjust row placement */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Styles for mobile devices */
+  .App {
+    grid-template-columns: 1fr; /* Display a single column layout */
+  }
+
+  .App-header {
+    min-height: auto; /* Reset minimum height */
+  }
+
+  .left-container,
+  .right-container,
+  .right-container-2 {
+    grid-row: auto; /* Reset grid row placement */
+    width: 100%; /* Take up full width */
+  }
+
+  .right-container {
+    align-items: center; /* Center align the content */
+  }
+}

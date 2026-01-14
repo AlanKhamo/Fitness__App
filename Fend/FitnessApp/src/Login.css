@@ -1,0 +1,9 @@
+
+
+.login-wrapper, .pic-wrapper {
+  
+  background-image: linear-gradient(to bottom, #f17070, #d36464, #fafafa);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
